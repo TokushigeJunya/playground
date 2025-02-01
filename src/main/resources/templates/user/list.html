@@ -14,11 +14,11 @@
 		<div class="mb-4">
 		    <form id="user-search-form" method="post" th:action="@{/user/list}" class="form-inline" th:object="${userListForm}">
 		        <div class="form-group" >
-		            <label for="userId" class="mr-2">ユーザーID</label>
+		            <label for="userId" class="mr-2" th:text="#{userId}"></label>
 		            <input type="text" class="form-control" th:field="*{userId}"/>
 		        </div>
 		        <div class="form-group mx-sm-3" >
-		            <label for="userName" class="mr-2">ユーザー名</label>
+		            <label for="userName" class="mr-2" th:text="#{userName}"></label>
 		            <input type="text" class="form-control" th:field="*{userName}"/>
 		        </div>
 		        <button class="btn btn-primary" type="submit">検索</button>
@@ -28,10 +28,10 @@
 			<table class="table table-striped table-bordered table-hover">
 		        <thead class="thead-light"> 
 					<tr>
-						<th class="th-width">ユーザーID</th>
-						<th class="th-width">ユーザー名</th> 
-						<th class="th-width">メールアドレス</th>
-						<th class="th-width">権限</th>
+						<th class="th-width" th:text="#{userId}"></th>
+						<th class="th-width" th:text="#{userName}"></th> 
+						<th class="th-width" th:text="#{mailAddress}"></th>
+						<th class="th-width" th:text="#{role}"></th>
 						<th></th>
 					</tr>
 				</thead> 
