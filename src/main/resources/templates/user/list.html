@@ -41,8 +41,8 @@
 						<td th:text="${item.userName}"></td>
 						<td th:text="${item.mailAddress}"></td>
 						<td>
-							<span th:if="${item.role == 'ROLE_ADMIN'}">管理者</span> 
-							<span th:if="${item.role == 'ROLE_GENERAL'}">一般</span>
+							<span th:if="${item.role == 'ROLE_ADMIN'}" th:text="#{roleAdmin}"></span> 
+							<span th:if="${item.role == 'ROLE_GENERAL'}" th:text="#{roleGeneral}"></span>
 						</td>
 						<td> <a class="btn btn-primary" th:href="@{'/user/detail/' + ${item.userId}}"> 詳細 </a> </td>
 					</tr>
