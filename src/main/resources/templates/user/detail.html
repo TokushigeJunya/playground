@@ -41,11 +41,11 @@
                             <div class="invalid-feedback" th:errors="*{mailAddress}"></div>
                         </td>
                     </tr>
-                    <tr> 
+                    <tr>
 			<th th:text="#{role}"></th>
-			<td> 
-			　　<input type="radio" th:field="*{role}" value="ROLE_GENERAL"th:text="#{roleGeneral}"/>
-                        　　<input type="radio" th:field="*{role}" value="ROLE_ADMIN" th:text="#{roleAdmin}"/>
+			<td>
+			    <input type="radio" th:field="*{role}" value="ROLE_GENERAL"th:text="#{roleGeneral}"/>
+                            <input type="radio" th:field="*{role}" value="ROLE_ADMIN" th:text="#{roleAdmin}"/>
                         </td>
                     </tr>
                 </tbody>
@@ -57,18 +57,18 @@
             </div>
         </form>
         <form id="user-delete-form" name="user-delete-form" method="post" th:action="@{/user/delete}" th:object="${userDetailForm}"> 
-			<input type="hidden" th:field="*{userId}"/>
-			<!-- バリデーション突破のための仮パスワード -->
-			<input type="hidden" th:value="password"/>
-			<input type="hidden" th:field="*{userName}"/>
-			<input type="hidden" th:field="*{mailAddress}"/>
+		<input type="hidden" th:field="*{userId}"/>
+		<!-- バリデーション突破のための仮パスワード -->
+		<input type="hidden" th:value="password"/>
+		<input type="hidden" th:field="*{userName}"/>
+		<input type="hidden" th:field="*{mailAddress}"/>
         </form>
         <form id="popup" class="p-4 bg-light rounded shadow">
-			<h2 class="h4">確認</h2>
-			<p id="popup-message"></p>
-			<div class="text-center">
-				<button id="confirmButton" class="btn btn-primary" type="button">はい</button>
-				<button id="cancelButton" class="btn btn-secondary" type="button">いいえ</button> 
+	    <h2 class="h4">確認</h2>
+	    <p id="popup-message"></p>
+	    <div class="text-center">
+		<button id="confirmButton" class="btn btn-primary" type="button">はい</button>
+		<button id="cancelButton" class="btn btn-secondary" type="button">いいえ</button> 
             </div>
         </form>
     </div>
