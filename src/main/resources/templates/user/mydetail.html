@@ -42,7 +42,7 @@
                         </td>
                     </tr>
                     <tr sec:authorize="hasRole('ADMIN')"> 
-			<th th:text="権限"></th>
+			<th th:text="#{mailAddress}"></th>
 			<td> 
 			    <input type="radio" th:field="*{role}" value="ROLE_GENERAL" th:text="一般"/> 
                             <input type="radio" th:field="*{role}" value="ROLE_ADMIN" th:text="管理者"/>
