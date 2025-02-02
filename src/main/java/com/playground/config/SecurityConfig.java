@@ -23,6 +23,7 @@ public class SecurityConfig {
 				.requestMatchers("/user/signup").permitAll()
 				.requestMatchers("/user/list").hasAuthority("ROLE_ADMIN")
 				.requestMatchers("/user/detail/**").hasAuthority("ROLE_ADMIN")
+				.requestMatchers("/actuator/health").permitAll()
 				.anyRequest().authenticated())
 		    .formLogin(login -> login
                 .loginProcessingUrl("/login")
