@@ -58,10 +58,6 @@
         </form>
         <form id="user-delete-form" name="user-delete-form" method="post" th:action="@{/user/delete}" th:object="${userDetailForm}"> 
 		<input type="hidden" th:field="*{userId}"/>
-		<!-- バリデーション突破のための仮パスワード -->
-		<input type="hidden" th:value="password"/>
-		<input type="hidden" th:field="*{userName}"/>
-		<input type="hidden" th:field="*{mailAddress}"/>
         </form>
         <form id="popup" class="p-4 bg-light rounded shadow">
 	    <h2 class="h4">確認</h2>
