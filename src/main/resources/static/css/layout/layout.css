@@ -16,3 +16,13 @@
     height: calc(100vh - 58px);
 }
 
+@media (max-width: 576px) {
+    .sidebar {
+        display: inline-block;
+        width: 100px;
+    }
+    .main {
+        display: inline-block;
+        width: calc(100% - 100px);
+    }
+}
