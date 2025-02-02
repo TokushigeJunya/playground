@@ -41,11 +41,11 @@
                             <div class="invalid-feedback" th:errors="*{mailAddress}"></div>
                         </td>
                     </tr>
-                    <tr>
-			<th　th:text="権限"></th>
+		    <tr>
+			<th th:text="#{role}"></th>
 			<td>
-			    <input type="radio" th:field="*{role}" value="ROLE_GENERAL" th:text="一般"/>
-                            <input type="radio" th:field="*{role}" value="ROLE_ADMIN" th:text="管理者"/>
+			    <input type="radio" th:field="*{role}" value="ROLE_GENERAL"th:text="#{roleGeneral}"/>
+                            <input type="radio" th:field="*{role}" value="ROLE_ADMIN" th:text="#{roleAdmin}"/>
                         </td>
                     </tr>
                 </tbody>
